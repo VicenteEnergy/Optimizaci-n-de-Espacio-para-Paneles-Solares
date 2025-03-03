@@ -1,0 +1,11 @@
+Hola, ¿cómo están? Soy Vicente Valdivia, egresado de Ingeniería Civil Eléctrica en la Universidad Católica de Valparaíso, y en este video explico cómo se desarrolla un código en MATLAB para calcular cuántos paneles solares caben en un techo o superficie determinada, a modo de optimizar el uso del espacio disponible como de los paneles.
+
+Este código se nutre en base a ingresar el área de la superficie como del panel a instalar, donde esta igual depende de la potencia del panel, haciendo variar la cantidad de paneles que puedan haber en la superficie. El área es fundamental porque la instalación de paneles solares depende directamente del espacio físico disponible sin excederlo. 
+
+El código calcula cuántos paneles caben en el techo usando la fórmula que divide el área del techo con respecto a la de los paneles usando un comando floor que permite redondear hacia abajo el resultado de la división, asegurando que el número de paneles sea un valor entero, lo que representa la cantidad exacta que puede instalarse sin exceder el área disponible. Igualmente se agrega una restricción para que el área de los paneles no sea mayor a la del techo, ya que eso sería inviable.
+ 
+El área del techo debe conocerse previamente antes de usar el código, por lo que se debe interpretar la geometría del techo y como se calcula matemáticamente cada área geométrica presente, como en techos rectangulares o triangulares, entre otros.
+
+En el caso de un techo isosceles, sabiéndo los metros de base que tiene este techo como la altura y sabiéndo como se calcula esa área, simplemente basta con ingresar al codigo este valor con el panel a instalar y te entregará la cantidad máxima a caber en ese techo.
+
+Este enfoque simplifica la planificación de instalaciones fotovoltaicas, ayudando a optimizar la cantidad de paneles según el área disponible para asegurar proyectos más eficientes. 🌞⚡
