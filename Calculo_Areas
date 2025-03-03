@@ -1,0 +1,30 @@
+%%---- Cálculo del área rectangular sobrepuesta ---%%
+%%----- Vicente Valdivia González------%%
+
+%%---Ingresar las dimensiones en metros de rectangulos de techo y paneles--- %%
+
+largo_techo_rectangular = input('Ingrese el largo del techo rectangular en metros: '); %Vendría a ser el largo "y" del techo rectangular
+ancho_techo_rectangular = input('Ingrese el ancho del techo rectangular en metros: '); %Vendría a ser el ancho "x" del techo rectangular
+largo_panel = input('Ingrese el largo del panel solar en metros: ');                   %Vendría a ser el largo "b" del panel
+ancho_panel = input('Ingrese el ancho del panel solar en metros: ');                   %Vendría a ser el largo "a" del panel
+
+% Calcular el área del techo como del panel
+area_techo_rectangular = largo_techo_rectangular * ancho_techo_rectangular; %Calculo de la base por la altura del techo rectangular
+area_panel = largo_panel * ancho_panel;                                     %Calculo de la base por la altura del panel solar
+
+% Mostrar el valor del área de techo como del panel
+
+fprintf('El área del techo rectangular es: %.2f m²\n', area_techo_rectangular);
+fprintf('El área del panel solar es: %.2f m²\n', area_panel);
+
+% Cálculos de áreas parciales de superposición:
+A1 = largo_techo_rectangular * (ancho_techo_rectangular - (3/2) * largo_panel); % utilizando supuestos al analizar la figura 
+A2 = (largo_techo_rectangular + ancho_panel) * ((3/2) * largo_panel);           % utilizando supuestos al analizar la figura
+
+% Área total de la superposición de techos rectangulares, siendo la suma
+% total de areas
+
+AT = 2 * A1 + A2;
+
+% Mostrar el área total de superposición
+fprintf('El área total de el techo rectangular superpuesto es: %.2f m²\n', AT);
