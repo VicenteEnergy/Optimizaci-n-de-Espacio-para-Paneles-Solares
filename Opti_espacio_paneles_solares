@@ -1,0 +1,27 @@
+%%----Optimización de Espacio para Paneles Solares -----%%
+                 %%----- Vicente Valdivia González------%%
+
+%Se busca la mayor cantidad de paneles en un area de trabajo especifico%%
+
+function maxPanelesPorArea()
+
+    % Solicitar datos de area del techo como del panel a instalar, la
+    % potencia del panel determina su tamaño y por ende su area%%
+
+    area_techo = input('Ingrese el área del techo en m²: '); %Se Ingresa el area del techo a operar los paneles
+    area_panel = input('Ingrese el área de un panel solar en m²: '); %Se ingresa el area del panel que se desea instalar
+    
+    % Validar que el área del panel no sea mayor que la del techo
+    if area_panel > area_techo
+        fprintf('El área del panel es mayor que el área del techo. No es posible instalar paneles.\n'); %Restriccion del codigo ya que el panel no es mayor que el techo
+        return;
+    end
+    
+    % Calcular la cantidad máxima de paneles
+
+    n_paneles = floor(area_techo / area_panel); %Comando floor genera un truncamiento en el calculo de la división, asi se tienen numeros de paneles cerrados
+    
+    % Mostrar el resultado en de cuantos paneles caben en el techo
+
+    fprintf('Para un techo de %.2f m² y paneles de %.2f m², el máximo de paneles a instalar es: %d\n', area_techo, area_panel, n_paneles);
+end 
